@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda</title>
+    <!--  BOOTSTRAP CSS  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!--  FONTS  -->
+
+    <!--  ------ -->
+    <!--  CSS    -->
+    <link rel="stylesheet" href="./style/styles.css">
+    <!--  ------ -->
+
+</head>
+
+<body>
+    <!-- SCRIPT -->
+    <script src="scripts/index.js"></script>
+    <!-- ------ -->
+    <!--  DESCRIPCIÓN  -->
+    <!--  Sistema creado para manejar la agenda de una barbería-->
+
+
+
+    <!-- Heading -->
+    <nav class="navbar navbar-light bg-white">
+        <div class="container-fluid">
+            <span class="navbar-brand mb-0 h1 fs-1">Dashboard
+            </span>
+            <span class="navbar-text">
+                Usuario: ZEROCOOL
+            </span>
+        </div>
+    </nav>
+    <!-- ------- -->
+    <div class="divdash bg-light">
+        <div class="container bg-light">
+            <div class="row">
+                <div class="col-3 gy-5 gx-5 fs-5">
+                    <p>Calendario</p>
+                    <p id="reloj"></p>
+                    <p>Estilista</p>
+                    <select id="stilCal" class="form-select form-select-md mb-3" aria-label="size 3 select example">
+                        <option value="1">Omar</option>
+                        <option value="2">Mario</option>
+                        <option value="3">Guido</option>
+                    </select>
+                </div>
+
+                <div class="col   gy-5 gx-2 fs-5">
+                    <p>Hora</p>
+                    <p>09:00</p>
+                    <p>10:00</p>
+                    <p>11:00</p>
+                    <p>12:00</p>
+                    <p>13:00</p>
+                    <p>15:00</p>
+                    <p>16:00</p>
+                    <p>17:00</p>
+                </div>
+                <div class="col   gy-5 gx-2 fs-5">
+                    <p id="reloj1"></p>
+                    <p id="d0109" onclick="myFunction()"></p> <!-- col1fil1 -->
+                    <p id="d0110"></p> <!-- col1fil2 -->
+                    <p id="d0111"></p>
+                    <p id="d0112"></p>
+                    <p id="d0113"></p>
+                    <p id="d0115"></p>
+                    <p id="d0116"></p>
+                    <p id="d0117"></p>
+                </div>
+                <div class="col   gy-5 gx-2 fs-5">
+                    <p id="reloj2"></p>
+                    <p id="d0209"></p> <!-- col2fil1-->
+                    <p id="d0210"></p> <!-- col2fol2-->
+                    <p id="d0211"></p>
+                    <p id="d0212"></p>
+                    <p id="d0213"></p>
+                    <p id="d0215"></p>
+                    <p id="d0216"></p>
+                    <p id="d0217"></p>
+                </div>
+                <div class="col   gy-5 gx-2 fs-5">
+                    <p id="reloj3"></p>
+                    <p id="d0309"></p>
+                    <p id="d0310"></p>
+                    <p id="d0311"></p>
+                    <p id="d0312"></p>
+                    <p id="d0313"></p>
+                    <p id="d0315"></p>
+                    <p id="d0316"></p>
+                    <p id="d0317"></p>
+                </div>
+                <div class="col   gy-5 gx-2 fs-5">
+                    <p id="reloj4"></p>
+                    <p id="d0409"></p>
+                    <p id="d0410"></p>
+                    <p id="d0411"></p>
+                    <p id="d0412"></p>
+                    <p id="d0413"></p>
+                    <p id="d0415"></p>
+                    <p id="d0416"></p>
+                    <p id="d0417"></p>
+                </div>
+                <div class="col   gy-5 gx-2 fs-5">
+                    <p id="reloj5"></p>
+                    <p id="d0509"></p>
+                    <p id="d0510"></p>
+                    <p id="d0511"></p>
+                    <p id="d0512"></p>
+                    <p id="d0513"></p>
+                    <p id="d0515"></p>
+                    <p id="d0516"></p>
+                    <p id="d0517"></p>
+                </div>
+                <div class="col   gy-5 gx-2 fs-5">
+                    <p id="reloj6"></p>
+                    <p id="d0609"></p>
+                    <p id="d0610"></p>
+                    <p id="d0611"></p>
+                    <p id="d0612"></p>
+                    <p id="d0613"></p>
+                    <p id="d0615"></p>
+                    <p id="d0616"></p>
+                    <p id="d0617"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
