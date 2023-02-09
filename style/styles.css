@@ -96,3 +96,81 @@ video {
     margin: 0;
     padding: 0;
 }
+
+/* (A) hora & "COLOR CODE" */
+.seat {
+    text-align: center;
+    padding: 20px 10px;
+    border-radius: 10px;
+    background: #f1f1f1;
+  }
+  .taken { background: #df0000; color: #fff; }
+  .selected { background: #87ff96; }
+  
+  /* (B) hora LAYOUT */
+  #layout {
+    max-width: 400px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  /* (C) LEGEND */
+  #legend {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 50px auto ;
+  }
+  #legend .txt {
+    display: flex;
+    align-items: center;
+  }
+  
+  /* (D) SAVE */
+  #save {
+    font-size: 20px;
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: 0;
+    color: #fff;
+    background: #00479f;
+  }
+  
+  /* (X) DOES NOT MATTER */
+  /* PAGE & BODY */
+  * {
+    font-family: arial, sans-serif;
+    box-sizing: border-box;
+  }
+  body {
+    display: flex;
+    align-items: center; justify-content: center;
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  
+  /* WIDGET */
+  .widget-wrap {
+    min-width: 600px;
+    padding: 30px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.8);
+  }
+  
+  
+  
+  /* FOOTER */
+  #code-boxx {
+    font-weight: 600;
+    margin-top: 50px;
+  }
+  #code-boxx a {
+    display: inline-block;
+    padding: 5px;
+    text-decoration: none;
+    background: #b90a0a;
+    color: #fff;
+  }
