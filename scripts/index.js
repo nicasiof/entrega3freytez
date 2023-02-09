@@ -1,5 +1,32 @@
 console.log('bienvenido al sistema de reservas');
 var hoy = new Date;
+
+document.getElementById("calendarJs").value = '2023-02-08';
+console.log(Date);
+
+
+
+
+
+//La fecha es de tipo Date
+const mifecha = Date();
+
+//Esta función de utilidad nos dará la fecha formateada
+const formatear = f =>
+    const año = f.getFullYear();
+    const mes = ("0" + (f.getMonth() + 1)).substr(-2);
+    const dia = ("0" + f.getDate()).substr(-2);
+    return `${año}-${mes}-${dia}`
+}
+
+//El input #cajaDeFecha es donde almacenaré el valor
+document.querySelector("#cajaDeFecha").value = formatear(miFecha);
+console.log(miFecha);
+
+
+/*
+
+
 let fecha = document.getElementById('fecha');
 let calOmar = [
     ["0", "0", "0", "0", "0", "1"], //a la hora d elas 9 el día
@@ -342,10 +369,10 @@ setInterval(function () {
     
         if (auxCal[0][3] == '1') { d0110 = "Disponible"; }
         else { d0110 = "Ocupada"; }
-        document.getElementById('d0110').innerHTML = d0110;*/
+        document.getElementById('d0110').innerHTML = d0110;
 
 }, 1000);
 
 function myFunction() {
-    alert ("Hora tomada. Por favor selecciona otra.");
-  }
+    alert("Hora tomada. Por favor selecciona otra.");
+}
