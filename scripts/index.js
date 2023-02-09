@@ -1,27 +1,31 @@
 console.log('bienvenido al sistema de reservas');
 var hoy = new Date;
-
-document.getElementById("calendarJs").value = '2023-02-08';
-console.log(Date);
-
-
-
-
-
+var DateTime = luxon.DateTime;
+const dt = DateTime.local(2017, 5, 15, 8, 30);
+const now = DateTime.now();
 //La fecha es de tipo Date
-const mifecha = Date();
+const miFecha = new Date();
 
-//Esta función de utilidad nos dará la fecha formateada
-const formatear = f =>
-    const año = f.getFullYear();
-    const mes = ("0" + (f.getMonth() + 1)).substr(-2);
-    const dia = ("0" + f.getDate()).substr(-2);
-    return `${año}-${mes}-${dia}`
+let d = new Date();
+let day = d.getDate();
+if (day < 10) {
+    day = "0" + day;
 }
+let mon = d.getMonth() + 1;
+if (mon < 10) {
+    mon = "0" + mon;
+}
+else { mon = "1" + mon; }
+let yea = d.getFullYear();
 
-//El input #cajaDeFecha es donde almacenaré el valor
-document.querySelector("#cajaDeFecha").value = formatear(miFecha);
-console.log(miFecha);
+d = yea + "-" + mon + "-" + day;
+console.log(d);
+document.getElementById('cajaDeFecha').value = d;
+document.getElementById('cajaDeFecha').min = d;
+
+document.getElementById('fechaLux').value = DateTime.now().toFormat('yyyy-MM-dd');
+document.getElementById('fechaLux').min = DateTime.now().toFormat('yyyy-MM-dd');
+document.getElementById('fechaLux').max = DateTime.now().plus({ days: 30 }).toISODate();
 
 
 /*
@@ -372,6 +376,8 @@ setInterval(function () {
         document.getElementById('d0110').innerHTML = d0110;
 
 }, 1000);
+
+*/
 
 function myFunction() {
     alert("Hora tomada. Por favor selecciona otra.");
