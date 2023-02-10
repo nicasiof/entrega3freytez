@@ -4,6 +4,8 @@ var DateTime = luxon.DateTime;
 const dt = DateTime.local(2017, 5, 15, 8, 30);
 const now = DateTime.now();
 
+
+
 //array de las reservas 
 let reservas =
     [{ id: 00, fecha: "2022-03-01", hora: "10:00", estado: 1, rut: 00, nombre: "carlos", celular: 123456789, estilista: "omar" },
@@ -13,9 +15,11 @@ let auxReservas = reservas;
 //La fecha es de tipo Date
 const miFecha = new Date();
 
+hoy = DateTime.now().toFormat('yyyy-MM-dd');
 document.getElementById('fechaLux').value = DateTime.now().toFormat('yyyy-MM-dd');
 document.getElementById('fechaLux').min = DateTime.now().toFormat('yyyy-MM-dd');
 document.getElementById('fechaLux').max = DateTime.now().plus({ days: 30 }).toISODate();
+
 
 
 
@@ -65,12 +69,27 @@ var reserve = {
 
         // (C3) SELECTED SEATS
         else {
-            // (C3-1) GET SELECTED hours NUMBERS
+            //(C3 - 1) GET SELECTED hours NUMBERS
             let seats = [];
-            for (let s of selected) { seats.push(s.innerHTML); }
+            let estil = document.getElementById("estilistas").value;
+            for (let s of selected) {
+                seats.push(s.innerHTML);
+
+                //(C3 - 2) DO SOMETHING WITH IT...
+                seats = seats + hoy + estil + document.getElementById("nombre").value + document.getElementById("telef").value;
+                alert(seats);
+            }
+
+
+
+
+            //{
+            // (C3-1) GET SELECTED hours NUMBERS
+            //let seats = [];
+            //for (let s of selected) { seats.push(s.innerHTML); }
 
             // (C3-2) DO SOMETHING WITH IT...
-            alert(JSON.stringify(seats));
+            //alert(JSON.stringify(seats));
         }
     }
 };
